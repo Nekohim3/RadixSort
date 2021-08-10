@@ -15,7 +15,7 @@ namespace RadixSorting
         /// <param name="comparer"></param>
         /// <typeparam name="TElement"></typeparam>
         /// <typeparam name="TKey"></typeparam>
-        private static void Sort<TElement, TKey>(IList<TElement> arr, Func<TElement, TKey> selector, Func<TKey, long> toLongConverter = null, Comparer<TKey> comparer = null)
+        public static void Sort<TElement, TKey>(IList<TElement> arr, Func<TElement, TKey> selector, Func<TKey, long> toLongConverter = null, Comparer<TKey> comparer = null)
         {
             if (toLongConverter == null)
                 toLongConverter = x => Convert.ToInt64(x);
